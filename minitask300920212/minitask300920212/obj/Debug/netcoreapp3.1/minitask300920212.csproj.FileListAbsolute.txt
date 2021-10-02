@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\minitask300920212\minitask300920212\bin\Debug\netcoreapp3.1\minitask300920212.exe
+C:\Users\User\source\repos\minitask300920212\minitask300920212\bin\Debug\netcoreapp3.1\minitask300920212.deps.json
+C:\Users\User\source\repos\minitask300920212\minitask300920212\bin\Debug\netcoreapp3.1\minitask300920212.runtimeconfig.json
+C:\Users\User\source\repos\minitask300920212\minitask300920212\bin\Debug\netcoreapp3.1\minitask300920212.runtimeconfig.dev.json
+C:\Users\User\source\repos\minitask300920212\minitask300920212\bin\Debug\netcoreapp3.1\minitask300920212.dll
+C:\Users\User\source\repos\minitask300920212\minitask300920212\bin\Debug\netcoreapp3.1\minitask300920212.pdb
+C:\Users\User\source\repos\minitask300920212\minitask300920212\obj\Debug\netcoreapp3.1\minitask300920212.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\minitask300920212\minitask300920212\obj\Debug\netcoreapp3.1\minitask300920212.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\minitask300920212\minitask300920212\obj\Debug\netcoreapp3.1\minitask300920212.AssemblyInfo.cs
+C:\Users\User\source\repos\minitask300920212\minitask300920212\obj\Debug\netcoreapp3.1\minitask300920212.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\minitask300920212\minitask300920212\obj\Debug\netcoreapp3.1\minitask300920212.dll
+C:\Users\User\source\repos\minitask300920212\minitask300920212\obj\Debug\netcoreapp3.1\minitask300920212.pdb
+C:\Users\User\source\repos\minitask300920212\minitask300920212\obj\Debug\netcoreapp3.1\minitask300920212.genruntimeconfig.cache
+C:\Users\User\source\repos\minitask300920212\minitask300920212\obj\Debug\netcoreapp3.1\minitask300920212.csproj.AssemblyReference.cache
