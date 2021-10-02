@@ -479,12 +479,22 @@ namespace minitask300920212
             try
             {
                 startpagecount = Convert.ToInt32(Console.ReadLine());
+                if (startpagecount<0)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Page count must be bigger than zero");
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.Write("Try again : ");
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    goto tryagainstartpagecount;
+                }
             }
             catch (FormatException)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Format is incorrect ! ");
-                Console.WriteLine("Try Again :");
+                Console.Write("Try Again :");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
                 goto tryagainstartpagecount;
 
             }
@@ -496,7 +506,15 @@ namespace minitask300920212
             try
             {
                 maxpagecount = Convert.ToInt32(Console.ReadLine());
-                Console.Clear();
+                if (maxpagecount < 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Page count must be bigger than zero");
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.Write("Try again : ");
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    goto tryagainmaxpagecount;
+                }
             }
             catch (FormatException)
             {
