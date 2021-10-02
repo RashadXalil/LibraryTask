@@ -52,6 +52,7 @@ namespace minitask300920212
                             Console.Clear();
                             goto tryagainmain;
                         case "N":
+                            Console.Clear();
                             Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("Shut Down ! ");
                             Console.WriteLine(DateTime.Now);
@@ -85,6 +86,7 @@ namespace minitask300920212
                             Console.Clear();
                             goto tryagainmain;
                         case "N":
+                            Console.Clear();
                             Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("Shut Down ! ");
                             Console.WriteLine(DateTime.Now);
@@ -110,6 +112,7 @@ namespace minitask300920212
                             Console.Clear();
                             goto tryagainmain;
                         case "N":
+                            Console.Clear();
                             Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("Shut Down ! ");
                             Console.WriteLine(DateTime.Now);
@@ -135,6 +138,7 @@ namespace minitask300920212
                             Console.Clear();
                             goto tryagainmain;
                         case "N":
+                            Console.Clear();
                             Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("Shut Down ! ");
                             Console.WriteLine(DateTime.Now);
@@ -160,6 +164,7 @@ namespace minitask300920212
                             Console.Clear();
                             goto tryagainmain;
                         case "N":
+                            Console.Clear();
                             Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("Shut Down ! ");
                             Console.WriteLine(DateTime.Now);
@@ -185,6 +190,7 @@ namespace minitask300920212
                             Console.Clear();
                             goto tryagainmain;
                         case "N":
+                            Console.Clear();
                             Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("Shut Down ! ");
                             Console.WriteLine(DateTime.Now);
@@ -210,6 +216,7 @@ namespace minitask300920212
                             Console.Clear();
                             goto tryagainmain;
                         case "N":
+                            Console.Clear();
                             Console.ForegroundColor = ConsoleColor.DarkRed;
                             Console.WriteLine("Shut Down ! ");
                             Console.WriteLine(DateTime.Now);
@@ -246,8 +253,18 @@ namespace minitask300920212
             string name = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.Write("Author Name : ");
+            tryagainauthorname:
             Console.ForegroundColor = ConsoleColor.DarkGray;
             string authorname = Console.ReadLine();
+            int intauthorname;
+            if (int.TryParse(authorname,out intauthorname))
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Integer can't contains in author's name ! ");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.Write("Try again :");
+                goto tryagainauthorname;
+            }
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.Write("Page Count : ");
 
@@ -472,6 +489,7 @@ namespace minitask300920212
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
+            tryagainelse:
             Console.Write("Start Range : ");
             Console.ForegroundColor = ConsoleColor.DarkGreen;
         tryagainstartpagecount:
@@ -499,7 +517,7 @@ namespace minitask300920212
 
             }
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Max Range : ");
+            Console.Write("End Range : ");
             Console.ForegroundColor = ConsoleColor.DarkGreen;
         tryagainmaxpagecount:
             int maxpagecount;
@@ -524,16 +542,26 @@ namespace minitask300920212
                 goto tryagainmaxpagecount;
 
             }
-            foreach (Book item in bookservice.books)
+            if (maxpagecount>startpagecount)
             {
-                if (item.BookPageCount >= startpagecount && item.BookPageCount <= maxpagecount)
+                foreach (Book item in bookservice.books)
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Book Finded ! ");
-                    Console.WriteLine("==========================================================================================");
-                    Console.WriteLine($"Book Code :{item.BookCode} \nBook : {item.BookName} \nAuthor : {item.BookAuthorName} \nPage Count : {item.BookPageCount}");
-                    Console.WriteLine("==========================================================================================");
+                    if (item.BookPageCount >= startpagecount && item.BookPageCount <= maxpagecount)
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
+                        Console.WriteLine("Book Finded ! ");
+                        Console.WriteLine("==========================================================================================");
+                        Console.WriteLine($"Book Code :{item.BookCode} \nBook : {item.BookName} \nAuthor : {item.BookAuthorName} \nPage Count : {item.BookPageCount}");
+                        Console.WriteLine("==========================================================================================");
+                    }
                 }
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("End Range must be Bigger Than Start Range ");
+                Console.ForegroundColor = ConsoleColor.White;
+                goto tryagainelse;
             }
         }
         public static void RemoveByNo(IBookservice bookservice)
